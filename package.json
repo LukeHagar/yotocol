@@ -1,14 +1,19 @@
 {
   "name": "yotocol",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "CLI tool to interact with Yoto cards",
   "type": "module",
-  "main": "src/index.js",
+  "main": "index.js",
   "bin": {
-    "yotocol": "./src/index.js"
+    "yotocol": "./index.js"
   },
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node index.js",
+    "dev": "nodemon --watch ./index.js --ext js,json --ignore '*.json' --exec npm start",
+    "compare": "node compare-cards.js",
+    "dev:compare": "nodemon --watch ./compare-cards.js --ext js,json --ignore '*.json' --exec npm run compare",
+    "dump": "node dump.js",
+    "dev:dump": "nodemon --watch ./dump.js --ext js,json --ignore '*.json' --exec npm run dump"
   },
   "keywords": [
     "cli",
@@ -19,9 +24,14 @@
   "license": "MIT",
   "dependencies": {
     "@clack/prompts": "^0.7.0",
+    "@pokusew/pcsclite": "^0.6.0",
+    "@taptrack/ndef": "^1.0.0",
     "commander": "^12.0.0",
-    "picocolors": "^1.0.0",
+    "filenamify": "^6.0.0",
     "nfc-pcsc": "^0.8.1",
-    "@taptrack/ndef": "^1.0.0"
+    "picocolors": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
   }
-} 
+}
