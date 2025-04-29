@@ -1,0 +1,27 @@
+{
+  "name": "yotocol",
+  "version": "0.1.0",
+  "description": "CLI tool to interact with Yoto cards",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "yotocol": "./src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": [
+    "cli",
+    "yoto",
+    "cards"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@clack/prompts": "^0.7.0",
+    "commander": "^12.0.0",
+    "picocolors": "^1.0.0",
+    "nfc-pcsc": "^0.8.1",
+    "@taptrack/ndef": "^1.0.0"
+  }
+} 
